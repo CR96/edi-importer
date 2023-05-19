@@ -22,6 +22,7 @@ unzip -p $1 routes.txt | cat
 echo
 read -p "Enter route to import (numerical entry only): " routevar
 
-unzip -p $1
-echo $routevar
+# Find every trip which corresponds to selected route
+# Search for lines with route number between commas
 
+unzip -p $1 trips.txt | grep ",$routevar,"
